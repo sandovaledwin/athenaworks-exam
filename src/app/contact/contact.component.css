@@ -1,0 +1,65 @@
+.flex {
+  display: flex; 
+  flex: auto;
+}
+.contact {
+  flex-direction: column;
+}
+.contact--picture {  
+  align-items: center;
+  border-bottom: 1.5pt solid #bfbfbf;
+  border-right: 1.5pt solid #bfbfbf;
+  border-top: 1.5pt solid #bfbfbf;
+  flex: none;  
+  height: 330px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;    
+  width: 430px;  
+}
+.contact--picture-background {  
+  background-image: url(https://via.placeholder.com/400x300.png);
+  background-repeat: no-repeat;
+  background-size: cover;  
+  filter: blur(6px);  
+  height: 330px;
+  position: absolute;  
+  left: 0;
+  top: 0;
+  width: 430px;
+}
+.contact--picture-thumbnail {
+  border: 2px solid #fff;  
+  border-radius: 50%;
+  filter: blur(0);
+  height: 165px;
+  left: 30%;
+  position: absolute;
+  top: 45px;  
+  width: 160px;  
+}
+.contact--name {
+  color: #fff;  
+  bottom: 60px;  
+  margin: 0 auto;
+  position: absolute;
+  z-index: 100;
+}
+.contact--group {
+  color: #fff;  
+  bottom: 30px;  
+  margin: 0 auto;
+  position: absolute;  
+  z-index: 101;
+}
+.contact--profile {
+  flex-direction: column;
+  padding: 35px 25px 25px 35px;
+}
+.contact--profile-label {
+  height: 25px;
+}
+.contact--profile-desc {
+  height: 50px;
+  padding: 5px 0;
+}

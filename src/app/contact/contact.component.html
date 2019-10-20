@@ -1,0 +1,37 @@
+<div class="contact flex">
+  <div class="contact--picture flex">
+    <div 
+      class="contact--picture-background"
+      [ngStyle]="{ 'background-image': 'url(' + data.picture + ')'}">
+    </div>
+    <img class="contact--picture-thumbnail" [src]="data.picture" />  
+    <div class="contact--name">{{data.firstName + ' ' + data.lastName}}</div>
+    <div class="contact--group">Student</div>
+  </div>
+  <div class="contact--profile flex">
+    <div class="contact--profile-label">
+      Short Bio:
+    </div>
+    <div class="contact--profile-desc">
+      Conquer the world
+    </div>
+    <div class="contact--profile-label">
+      The direction of the profession:
+    </div>
+    <div class="contact--profile-desc">
+      Turism
+    </div>
+    <div class="contact--profile-label">
+      Email Address:
+    </div>
+    <div class="contact--profile-desc">
+        {{data.email}}
+    </div>
+    <div class="contact--profile-label">
+      Phone Number:
+    </div>
+    <div class="contact--profile-desc">
+      {{data.phone}}
+    </div>        
+  </div>  
+</div>

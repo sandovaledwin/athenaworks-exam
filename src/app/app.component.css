@@ -1,0 +1,26 @@
+.flex {
+  display: flex; 
+  flex: auto;
+}
+.main {
+  /*
+  background-image: url('http://localhost:4200/assets/img/wireframe.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  */
+  justify-content: center;
+}
+.main--container {
+  flex: none;
+  /*opacity: 0.5;*/
+  width: 1080px;
+}
+.main--contact-card, 
+.main--contact-list {
+  margin: 15px 40px;
+}
+.main--contact-card {
+  border-left: 1.5pt solid #bfbfbf;
+}

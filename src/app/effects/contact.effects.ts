@@ -25,6 +25,7 @@ export class ContactEffects {
               firstName: contact.name.first,
               lastName: contact.name.last,
               email: contact.email,
+              picture: contact.picture.large,
               phone: contact.phone,
               bio: '',
               career: '',

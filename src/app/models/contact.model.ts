@@ -3,6 +3,7 @@ export interface Contact {
   firstName: string,
   lastName: string,
   email: string,
+  picture: string,
   phone: string,
   bio: string,
   group: Array<string>

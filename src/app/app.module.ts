@@ -9,10 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { reducer } from './reducers/contact.reducer';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContactsComponent,
+    ContactComponent
   ],
   imports: [
     AppRoutingModule,
