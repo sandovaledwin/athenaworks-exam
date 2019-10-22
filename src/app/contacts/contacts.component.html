@@ -1,1 +1,31 @@
-<div>{{ data | json }}</div>
+<div class="clr-row">
+  <div class="clr-col">  
+    <h2>Users</h2>
+    <p>If you want to get contact information to specific user, just select group and then select him from the list below.</p>
+  </div>
+</div>
+<div class="clr-row space">
+    <div class="clr-col-4">  
+      Select group of users:
+    </div>
+    <div class="clr-col-8">
+      <select name="options">
+        <option value="one">Students</option>
+      </select>
+    </div>
+  </div>
+<div class="clr-row">
+  <div 
+    *ngFor="let contact of contacts$ | async"
+    class="clr-col-6"
+    (click)="change.emit(contact)">
+    <div class="clr-row">
+      <div class="clr-col-4">
+        <img class="photo" [src]="contact.picture" />
+      </div>      
+      <div class="clr-col-8">
+        {{contact.firstName + ' ' + contact.lastName}}
+      </div>
+    </div>
+  </div>
+</div>

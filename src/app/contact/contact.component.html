@@ -1,37 +1,53 @@
-<div class="contact flex">
-  <div class="contact--picture flex">
-    <div 
-      class="contact--picture-background"
-      [ngStyle]="{ 'background-image': 'url(' + data.picture + ')'}">
-    </div>
-    <img class="contact--picture-thumbnail" [src]="data.picture" />  
-    <div class="contact--name">{{data.firstName + ' ' + data.lastName}}</div>
-    <div class="contact--group">Student</div>
+<div class="clr-row">
+  <div class="clr-col">
+    <div class="contact--picture flex">
+        <div 
+          class="contact--picture-background"
+          [ngStyle]="{ 'background-image': 'url(' + data.picture + ')'}">
+        </div>
+        <img class="contact--picture-thumbnail" [src]="data.picture" />  
+        <h3 class="contact--name">{{data.firstName + ' ' + data.lastName}}</h3>
+        <h4 class="contact--group">Student</h4>
+      </div>      
   </div>
-  <div class="contact--profile flex">
-    <div class="contact--profile-label">
-      Short Bio:
-    </div>
-    <div class="contact--profile-desc">
-      Conquer the world
-    </div>
-    <div class="contact--profile-label">
-      The direction of the profession:
-    </div>
-    <div class="contact--profile-desc">
-      Turism
-    </div>
-    <div class="contact--profile-label">
-      Email Address:
-    </div>
-    <div class="contact--profile-desc">
-        {{data.email}}
-    </div>
-    <div class="contact--profile-label">
-      Phone Number:
-    </div>
-    <div class="contact--profile-desc">
-      {{data.phone}}
-    </div>        
-  </div>  
+</div>
+<div class="clr-row">
+  <div class="clr-col">
+    <h4>Short Bio:</h4>
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col">
+    Conquer the world
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col">
+    <h4>The direction of the profession:</h4>
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col">
+    Turism
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col">
+    <h4>Email Address:</h4>
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col">
+    {{data.email}}
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col">
+    <h4>Phone Number:</h4>
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col">
+    {{data.phone}}
+  </div>
 </div>

@@ -1,20 +1,23 @@
-<div class="main flex">
-  <div class="main--container flex">
-    <div class="main--contact-list">
-      <contacts 
-        *ngFor="let contact of contacts$ | async"
-        [data]="contact">
-      </contacts>      
+<div class="main-container">
+  <div class="content-container">
+    <div class="content-area">
+      <div class="clr-row">
+        <div class="clr-col">
+          <div class="clr-row">
+            <div class="clr-col-md-7 clr-col-sm-12 clr-col-12 section--left">
+              <contacts 
+                class="contacts-list" 
+                [contacts$]="contacts$"
+                (change)="showContact($event)">
+              </contacts> 
+            </div>
+            <div class="clr-col-md-5 clr-col-sm-12 clr-col-12 section--right">
+              <contact *ngIf="contact" [data]="contact">
+              </contact> 
+            </div>                        
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="main--contact-card">
-      <contact 
-        *ngIf="contact"
-        [data]="contact">
-      </contact>      
-    </div>
-    
-    <router-outlet></router-outlet> 
   </div>
-  
- 
 </div>

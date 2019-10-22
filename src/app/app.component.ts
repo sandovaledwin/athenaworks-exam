@@ -36,4 +36,8 @@ export class AppComponent implements OnInit {
     this.subscription.unsubscribe();
   }
 
+  showContact(contact: Contact) {
+    this.contact = contact;
+  }  
+
 }

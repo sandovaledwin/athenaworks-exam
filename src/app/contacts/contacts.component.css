@@ -1,0 +1,16 @@
+.photo {
+  border: 2px solid #fff;  
+  border-radius: 50%;
+  filter: blur(0);
+  height: 65px;
+  width: 60px;    
+}
+select {
+  width: 75%;
+}
+.space {
+  margin: 20px 0 40px 0;
+}
+.space .clr-col-4 {
+  padding: 0;
+}
