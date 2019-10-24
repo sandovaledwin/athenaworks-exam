@@ -1,9 +1,22 @@
+.contact-name:hover {
+  background-color: lightpink;
+  border-radius: 25px;
+}
+.contact-text {
+  padding: 18px 0 0 0;
+}
+.contact-picture {
+  padding: 0;
+}
 .photo {
   border: 2px solid #fff;  
   border-radius: 50%;
   filter: blur(0);
   height: 65px;
   width: 60px;    
+}
+.hideElement {
+  display: none;
 }
 select {
   width: 75%;
@@ -13,4 +26,8 @@ select {
 }
 .space .clr-col-4 {
   padding: 0;
+}
+.view-more {
+  text-align: center;
+  margin: 40px 0;
 }

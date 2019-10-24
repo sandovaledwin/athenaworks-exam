@@ -9,23 +9,29 @@
       Select group of users:
     </div>
     <div class="clr-col-8">
-      <select name="options">
-        <option value="one">Students</option>
+      <select name="options" (change)="groupSelected=$event.target.value">
+        <option *ngFor="let group of groups" [value]="group">{{group}}</option>
       </select>
     </div>
   </div>
 <div class="clr-row">
   <div 
     *ngFor="let contact of contacts$ | async"
+    [ngClass]="{ 'hideElement' : contact.group != groupSelected && groupSelected != 'All' }"
     class="clr-col-6"
-    (click)="change.emit(contact)">
-    <div class="clr-row">
-      <div class="clr-col-4">
+    (click)="showProfile.emit(contact)">
+    <div class="clr-row contact-name">
+      <div class="clr-col-4 contact-picture">
         <img class="photo" [src]="contact.picture" />
       </div>      
-      <div class="clr-col-8">
+      <div class="clr-col-8 contact-text">
         {{contact.firstName + ' ' + contact.lastName}}
       </div>
     </div>
+  </div>
+</div>
+<div class="clr-row">
+  <div class="clr-col view-more">
+    <button class="btn" (click)="showMore.emit()">View More</button>
   </div>
 </div>

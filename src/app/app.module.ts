@@ -11,17 +11,19 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContactComponent } from './contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
-    ContactComponent
+    ContactComponent    
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     EffectsModule.forRoot([ContactEffects]),
+    FormsModule,
     HttpClientModule,
     StoreModule.forRoot({
       contact: reducer

@@ -10,6 +10,15 @@ import { Observable } from 'rxjs';
 export class ContactsComponent {
 
   @Input() contacts$: Observable<Contact[]>;
-  @Output() change = new EventEmitter<Contact>();
+  @Output() showProfile = new EventEmitter<Contact>();
+  @Output() showMore = new EventEmitter();
+
+  groupSelected: string = 'All';
+  groups: Array<string> = [
+    'All',
+    'Student', 
+    'Professor', 
+    'Administrative'
+  ];
 
 }

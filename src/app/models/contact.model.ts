@@ -6,6 +6,6 @@ export interface Contact {
   picture: string,
   phone: string,
   bio: string,
-  group: Array<string>
+  group: string,
   career: string
 }

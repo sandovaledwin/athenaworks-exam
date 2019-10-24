@@ -38,6 +38,10 @@ export class AppComponent implements OnInit {
 
   showContact(contact: Contact) {
     this.contact = contact;
-  }  
+  }
+
+  showMore() {
+    this.store.dispatch({ type: '[CONTACT] Load contacts' });
+  }
 
 }

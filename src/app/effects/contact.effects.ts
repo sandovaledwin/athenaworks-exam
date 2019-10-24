@@ -8,6 +8,21 @@ import { ContactService } from '../services/contact.service';
 @Injectable()
 export class ContactEffects {
 
+  careers = [    
+    'Accounting',
+    'Architecture',    
+    'Biology',
+    'Business Administration',
+    'Computer Science', 
+    'Mathematics'    
+  ];
+
+  groups = [
+    'Student', 
+    'Professor', 
+    'Administrative'
+  ];  
+
   constructor(
     private actions$: Actions,
     private contactService: ContactService
@@ -19,7 +34,9 @@ export class ContactEffects {
       .pipe(
         map((contacts: any) => {
           const contactList: Contact[] = [];
-          contacts.results.forEach((contact) => {
+          contacts.results.forEach((contact) => {            
+            const careerSelected = this.careers[Math.floor(Math.random() * 6)];
+            const groupSelected = this.groups[Math.floor(Math.random() * 3)];            
             contactList.push({
               id: contact.login.uuid,
               firstName: contact.name.first,
@@ -27,9 +44,9 @@ export class ContactEffects {
               email: contact.email,
               picture: contact.picture.large,
               phone: contact.phone,
-              bio: '',
-              career: '',
-              group: []
+              bio: 'Lorem Ipsum is simply dummy text ',
+              career: careerSelected,
+              group: groupSelected
             });
           });
           return ({ type: '[CONTACT] Add many', payload: contactList })

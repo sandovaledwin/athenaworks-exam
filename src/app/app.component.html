@@ -8,7 +8,8 @@
               <contacts 
                 class="contacts-list" 
                 [contacts$]="contacts$"
-                (change)="showContact($event)">
+                (showMore)="showMore()"
+                (showProfile)="showContact($event)">
               </contacts> 
             </div>
             <div class="clr-col-md-5 clr-col-sm-12 clr-col-12 section--right">
